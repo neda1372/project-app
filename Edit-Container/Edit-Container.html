@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-Container</title>
+    <script src="../js-all/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../Edit-Container/Edit-Container.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="../Edit-Container/fstdropdown-master/fstdropdown.js"></script>
+    <link rel="stylesheet" href="../Edit-Container/fstdropdown-master/fstdropdown.css">
+    <script src="../Edit-Container/fstdropdown-master/fstdropdown.min.js"></script>
+    <link rel="stylesheet" href="../Create-New-Container-Page/fstdropdown-master/fstdropdown.min.css">
+    <link rel="stylesheet" href="../Edit-Container/Font/iranyekan/IRANYekanMedium.ttf">
+    <script src="../js-all/js-input-gheymat.txt"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"> -->
+    <script src="../Edit-Container/js/Edit-container.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <div class="edit-container col-sm-12 col-md-12">
+                    <label> ویرایش ظرف</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="h4 h4-style">مشخصات</div>
+                        <div class="row">
+                            <div class="column col-sm-6 col-md-6">
+                                <label class="container-label" id="addon-ItemName">نام ظرف</label>
+                                <input type="text" class="container-input input-boxshadow" id="txtEditContainerName"
+                                    required>
+                                <div class="valid-feedback">
+                                    <div class="invalid-feedback">
+                                        نام کالا را وارد کنید
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column col-sm-6 col-md-6">
+                                <label class="container-label" id="addon-ItemCode">کد کالا</label>
+                                <input type="text" id="txtEditContainerCode"
+                                    class="container-input input-boxshadow font-color" required
+                                    placeholder="کد استاندارد دیاکوپارس">
+                                <div class="valid-feedback">
+                                    <div class="invalid-feedback">
+                                        کد کالا را وارد کنید
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-ItemVolume">حجم</label>
+                                <input type="text" class="container-input input-boxshadow" placeholder="cc"
+                                    id="txtEditContainerVolume" required>
+                                <div class="invalid-feedback">
+                                    حجم کالا را وارد کنید
+                                </div>
+                            </div>
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-PackingNameDropdown">نام بسته بندی</label>
+                                <select class="fstdropdown-select container-input input-boxshadow"
+                                    id="PackingNameDropdown" required>
+                                    <!-- <option value="" class="dropdown-menu-option">انتخاب کنید</option>
+                                    <option id="PackingName-10016" value="1" class="dropdown-menu-option">کوارت</option>
+                                    <option id="PackingName-10017" value="2" class="dropdown-menu-option">گالن</option>
+                                    <option id="PackingName-10018" value="3" class="dropdown-menu-option">حلب</option>
+                                    <option id="PackingName-10019" value="4" class="dropdown-menu-option">بشکه</option>
+                                    <option id="PackingName-10020" value="5" class="dropdown-menu-option">-</option>
+                                    <option id="PackingName-10021" value="6" class="dropdown-menu-option">سطل</option>
+                                    <option id="PackingName-10167" value="7" class="dropdown-menu-option">حلب بلند</option>
+                                    <option id="PackingName-10225" value="7" class="dropdown-menu-option">کارتن</option> -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    گروه را انتخاب کنید
+                                </div>
+                            </div>
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-Price">قیمت</label>
+                                <input type="text" id="txtEditContainerPrice"
+                                    class="container-input input-boxshadow form-control-firstInfo" placeholder="ریال"
+                                    onkeyup="javascript:this.value=separateNum(this.value);"
+                                    onkeypress="return allowOnlyNumber(event);" name="CiPrice" required>
+                                <div class="valid-feedback">
+                                    <div class="invalid-feedback">
+                                        قیمت کالا را وارد کنید
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="container-button-save">
+            <button type="submit" class="button-save" id="SaveContainer">ذخیره</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

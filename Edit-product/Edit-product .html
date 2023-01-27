@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-product</title>
+    <script src="../js-all/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../Edit-product/Edit-product.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="../Edit-product/fstdropdown-master/fstdropdown.js"></script>
+    <link rel="stylesheet" href="../Edit-product/fstdropdown-master/fstdropdown.css">
+    <script src="../Edit-product/fstdropdown-master/fstdropdown.min.js"></script>
+    <link rel="stylesheet" href="../Edit-product/fstdropdown-master/fstdropdown.min.css">
+    <link rel="stylesheet" href="../Edit-product/Font/iranyekan/IRANYekanMedium.ttf">
+    <script src="../js-all/js-input-gheymat.txt"></script>
+    <script src="../Edit-product/js/edit-product.js"></script>
+    <script src="../Edit-product/js/Edit-product-btn.js"></script>
+
+
+</head>
+
+<body>
+    <form id="SubmitProducts">
+        <div class="container">
+            <div class="main">
+                <div class="row">
+                    <div class="edit-product col-sm-12 col-md-12">
+                        <img src="../DiacoIcon/Edit.png" class="img-style">
+                        <label> ویرایش محصول</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card container-card">
+                        <div class="card-body container-card-body">
+                            <div class="h4 h4-style"><img src="../DiacoIcon/BasicInfo.png" class="img-style">اطلاعات
+                                اولیه</div>
+                            <div class="row">
+                                <div class="column col-sm-6 col-md-6">
+                                    <label class="container-label" id="addon-ItemName">نام فارسی</label>
+                                    <input type="text" class="container-input input-boxshadow" id="PersianNameModal"
+                                        required>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback">
+                                        نام فارسی را وارد کنید
+                                    </div>
+                                </div>
+                                <div class="column col-sm-6 col-md-6">
+                                    <label class="container-label" id="addon-ItemName">نام انگلیسی</label>
+                                    <input type="text" class="container-input input-boxshadow" id="EnglishNameModal"
+                                        required>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback">
+                                        نام انگلیسی را وارد کنید
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column col-sm-4 col-md-4">
+                                    <label class="container-label" id="addon-ItemName">کد دیاکو</label>
+                                    <input type="text" id="DiacoCodeModal" class="container-input input-boxshadow font-color"
+                                        required>
+                                    <div class="valid-feedback"></div>
+                                    <div class="invalid-feedback">
+                                        کد محصول را وارد کنید
+                                    </div>
+                                </div>
+                                <div class="column col-sm-4 col-md-4">
+                                    <label class="container-label" id="addon-ItemName">وضعیت محصول</label>
+                                    <select class="fstdropdown-select container-input input-boxshadow "
+                                    id="ProductStatusModalInputDropdown" required>
+                                        <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                        <option id="52" value="1" class="dropdown-menu-option"> فعال </option>
+                                        <option id="53" value="2" class="dropdown-menu-option"> غیرفعال </option> -->
+                                    </select>
+                                    <div class="valid-feedback">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        وضعیت محصول را انتخاب کنید
+                                    </div>
+                                </div>
+                                <div class="column col-sm-4 col-md-4">
+                                    <label class="container-label" id="addon-ItemName">واحد کالا</label>
+                                    <select class="fstdropdown-select container-input input-boxshadow "
+                                    id="ProductUnitInputDropdown" required>
+                                        <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                        <option id="55" value="1" class="dropdown-menu-option"> کیلوگرم </option>
+                                        <option id="56" value="2" class="dropdown-menu-option"> عدد </option> -->
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        <div class="invalid-feedback">
+                                            واحد کالا را انتخاب کنید
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/Group.png" class="img-style">گروه ها</div>
+                        <div class="row justify">
+                            <div class="column-style col-sm-6 xol-md-6" id="groupSelected">
+                                <label class="container-label" id="addon-ItemName">نام گروه
+                                    <a class="btn-expand" title="expand"></a>
+                                    <a class="btn-collapse" title="collapse"></a>
+                                </label>
+                            </div>
+                            <div class="column-style col-sm-6 xol-md-6">
+                                <label class="container-label" id="addon-ItemName">گروه انتخاب شده</label>
+                                <div class="card card-group-style">
+                                    <div class="card-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/Create-NewProduct-Hardener.svg"
+                                class="img-style lable-img">هاردنر</div>
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label" id="addon-ItemName">هاردنر مربوطه</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="HardnerDropdown" required>
+                                    <!-- <option value="" class="dropdown-menu-option">انتخاب کنید</option>
+                                    <option id="124" value="1" class="dropdown-menu-option">1</option>
+                                    <option id="134" value="2" class="dropdown-menu-option">2</option>
+                                    <option id="135" value="3" class="dropdown-menu-option">3</option>
+                                    <option id="137" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="139" value="5" class="dropdown-menu-option">5</option> -->
+                                </select>
+                            </div>
+                            <div class="column col-sm-1 col-md-1 img-btn">
+                                <button class="button-style" id="btnAddToHardnerList"> <img src="../DiacoIcon/Create.svg" class="create-button"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-md-11 c0l-sm-11 lable-table-incompatible table-margin-top" style="overflow-x: auto;">
+                                <table class="table table-bordered" id="HardnerTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-hardner table-hardner-col1 ">ردیف</th>
+                                            <th scope="col" class="table-hardner table-hardner-col2 ">هاردنر</th>
+                                            <th scope="col" class="table-hardner table-hardner-col3">نسبت رنگ به هاردنر</th>
+                                            <th scope="col" class="table-hardner-col4" title="عملیات"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="HardnerList">
+                                            <!-- <tr>
+                                                <td id="142" class="tbody-hardner">1</td>
+                                                <td class="tbody-hardner tbody-hardner-min-width">هاردنر پلی اورتان صنعتی (IPH 25)</td>
+                                                <td class="tbody-hardner">20</td>
+                                                <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                            </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/Create-NewProduct-Thinner.svg"
+                                class="img-style lable-img">تینر</div>
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label" id="addon-ItemName">تینر مربوطه</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="ThinnerDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option">انتخاب کنید</option>
+                                    <option id="0" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="1" value="2" class="dropdown-menu-option">2 </option>
+                                    <option id="2" value="3" class="dropdown-menu-option">3</option>
+                                    <option id="3" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="4" value="5" class="dropdown-menu-option">5</option> -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/Package.png" class="img-style">بسته بندی </div>
+                        <div class="row">
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-ItemName">بسته بندی</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="ProductContainerDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="4" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="5" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option id="6" value="3" class="dropdown-menu-option">3 </option>
+                                    <option id="7" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="8" value="5" class="dropdown-menu-option">5</option> -->
+                                </select>
+                            </div>
+                            <div class="column col-sm-3 col-md-3">
+                                <label class="container-label" id="addon-ItemName">وزن محتوا</label>
+                                <input type="text" id="PackingWeight" class="container-input input-boxshadow font-color"
+                                    placeholder="کیلوگرم" required>
+                            </div>
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-ItemName">قالب چاپ</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="lable-themeDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="0" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="1" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option id="2" value="3" class="dropdown-menu-option">3 </option>
+                                    <option id="3" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="4" value="5" class="dropdown-menu-option"> 5</option> -->
+                                </select>
+                            </div>
+                            <div class="column col-sm-1 col-md-1 img-btn">
+                                <button class="button-style" id="btnAddToPackingList"> <img src="../DiacoIcon/Create.svg" class="create-button"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-md-11 c0l-sm-12 lable-table-incompatible table-margin-top" style="overflow-x: auto;">
+                                <table class="table table-bordered" id="PackingTable"> 
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-packing table-packing-col1">ردیف</th>
+                                            <th scope="col" class="table-packing table-packing-col2">بسته بندی</th>
+                                            <th scope="col" class="table-packing table-packing-col3">نام ظرف</th>
+                                            <th scope="col" class="table-packing table-packing-col4">وزن محتوا </th>
+                                            <th scope="col" class="table-packing table-packing-col5">قالب چاپ </th>
+                                            <th scope="col" class="table-packing-col6" title="عملیات"></th>
+                                            <th scope="col" class="table-packing-col7" title="عملیات"></th>
+                                            <th scope="col" class="table-packing-col8" title="عملیات"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="PackingList">
+                                        <!-- <tr id="tr-11">
+                                            <td id="Priority11-4" class="tbody-packing">1</td>
+                                            <td class="tbody-packing">گالن</td>
+                                            <td class="tbody-packing  tbody-hardner-min-width">گالن فلزی رنگ ( 4 لیتری )</td>
+                                            <td class="tbody-packing ">4</td>
+                                            <td>
+                                            <select class="fstdropdown-select container-input input-boxshadow " id="themeDropdown-11-4"
+                                             required> -->
+                                             <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                             <option id="17" value="1" class="dropdown-menu-option"> 1 </option>
+                                             <option id="15" value="2" class="dropdown-menu-option"> 2 </option>
+                                             <option id="14" value="3" class="dropdown-menu-option">3 </option>
+                                             <option id="13" value="4" class="dropdown-menu-option">4</option>
+                                             <option id="31" value="5" class="dropdown-menu-option"> 5</option> -->
+                                             <!-- </select>
+                                            </td>
+                                            <td class="tbody-packing-col6"><button id="print" class="button-style"><img src="../DiacoIcon/PdfFile.svg" class="tbody-icone"></button></td>
+                                            <td class="tbody-packing-col7"><button id="file-upload-11-4" class="button-style"><img src="../DiacoIcon/Attach.svg" class="tbody-icone"></td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr> -->
+                                        <!-- <tr>
+                                            <td class="tbody-packing">2</td>
+                                            <td class="tbody-packing">حلب</td>
+                                            <td class="tbody-packing  tbody-hardner-min-width">حلب تمام تخلیه فلزی 31 سانت</td>
+                                            <td class="tbody-packing">20</td>
+                                            <td>
+                                                <select id="themeDropdown-8-20" class="fstdropdown-select container-input input-boxshadow"required> -->
+                                                 <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                                 <option id="0" value="1" class="dropdown-menu-option"> 1 </option>
+                                                 <option id="1" value="2" class="dropdown-menu-option"> 2 </option>
+                                                 <option id="2" value="3" class="dropdown-menu-option">3 </option>
+                                                 <option id="3" value="4" class="dropdown-menu-option">4</option>
+                                                 <option id="4" value="5" class="dropdown-menu-option"> 5</option> -->
+                                                 <!-- </select>
+                                                </td>
+                                            <td class="tbody-packing-col6"><button class="button-style"><img src="../DiacoIcon/PdfFile.svg" class="tbody-icone"></button></td>
+                                            <td class="tbody-packing-col7"><button class="button-style"><img src="../DiacoIcon/Attach.svg" class="tbody-icone"></td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/NewProduct-TechnicalInfo.svg"
+                                class="img-style lable-img">اطلاعات فنی </div>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="DescriptionTotal" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">توضیح مختصر</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnglishDescriptionTotal" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea">SUMMARY
+                                    DESCRIPTION</label>
+                            </div>
+                        </div>
+                        <hr class="hr-style">
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="LongDescriptionTotal" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">توضیحات کلی</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="LongEnglishDescriptionTotal" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea"> DESCRIPTION</label>
+                            </div>
+                        </div>
+                        <hr class="hr-style">
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="FaRecommendedUse" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">توصیه موارد مصرف</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnRecommendedUse" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea"> RECOMMENDED
+                                    USE</label>
+                            </div>
+                        </div>
+                        <hr class="hr-style">
+                        <div class="row">
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-ItemName">نوع لایه</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="ProductLayerTypeDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="10095" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="10096" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option value="10097" value="3" class="dropdown-menu-option"> 3 </option> -->
+                                </select>
+                            </div>
+                            <div class="column col-sm-4 col-md-4">
+                                <label class="container-label" id="addon-ItemName">نوع ساختار</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="ProductStructureDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="10197" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="10198" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option id="10199" value="3" class="dropdown-menu-option">3 </option> -->
+                                </select>
+                            </div>
+                            <div class="column col-sm-3 col-md-3">
+                                <label class="container-label" id="addon-ItemName">نوع پوشش</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="OpacityDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="10100" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="10101" value="2" class="dropdown-menu-option"> 2 </option> -->
+                                </select>
+                            </div>
+                        </div>
+                        <hr class="hr-style">
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label" id="addon-ItemName">سطوح مورد استفاده</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="UseForDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="10110" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="10111" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option id="10112" value="3" class="dropdown-menu-option">3 </option>
+                                    <option id="10113" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="10114" value="5" class="dropdown-menu-option"> 5</option> -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="PersianUseForDesc" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">توضیحات اماده سازی سطح</label>
+                            </div>
+                            <div class="form-floating col-sm-5 col-md-5">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnglishUseForDesc" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea direction">SURFACE
+                                    PREPRATION DESCRIPTION</label>
+                            </div>
+                            <div class="column col-sm-1 col-md-1 img-btn">
+                                <button class="button-style" id="btnAddToUseFor"> <img src="../DiacoIcon/Create.svg" class="create-button"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-md-11 c0l-sm-12 lable-table-incompatible table-margin-top" style="overflow-x: auto;">
+                                <table class="table table-bordered" id="UseForTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-information table-information-col1">ردیف</th>
+                                            <th scope="col" class="table-information table-information-col2">سطح</th>
+                                            <th scope="col" class="table-information table-information-col3">توضیحات</th>
+                                            <th scope="col" class="table-information table-information-col4">DESCRIPTION</th>
+                                            <th scope="col" class="table-information-col5" title="عملیات"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="UseForList">
+                                        <!-- <tr>
+                                            <td class="tbody-information">1</td>
+                                            <td class="tbody-information tbody-hardner-min-width">فلز | Metal</td>
+                                            <td class="tbody-information"></td>
+                                            <td class="tbody-information"></td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label" id="addon-ItemName">ویژگی ها</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="SpecificationDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="10103" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="10104" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option id="10105" value="3" class="dropdown-menu-option">3 </option>
+                                    <option id="10106" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="10107" value="5" class="dropdown-menu-option"> 5</option> -->
+                                </select>
+                            </div>
+                            <div class="column col-sm-1 col-md-1 img-btn">
+                                <button class="button-style" id="btnAddToSpecification"> <img src="../DiacoIcon/Create.svg" class="create-button"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-md-11 c0l-sm-12 lable-table-incompatible table-margin-top" style="overflow-x: auto;">
+                                <table class="table table-bordered" id="SpecificationTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table2-information table2-information-col1">ردیف</th>
+                                            <th scope="col" class="table2-information table2-information-col2">ویژگی</th>
+                                            <th scope="col" class="table2-information-col3" title="عملیات"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="SpecificationList">
+                                        <!-- <tr>
+                                            <td id="Specification-10172" class="tbody2-information-col1-3">1</td>
+                                            <td class="tbody2-information-col1-3 tbody-information-min-width">محافظت طولانی مدت پیشرفته | ADVANCED LONG-TERM PROTECTION</td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tbody2-information-col2-4">2</td>
+                                            <td class="tbody2-information-col2-4">نیمه براق | Semi Gloss</td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="Specification-10161" class="tbody2-information-col1-3">3</td>
+                                            <td class="tbody2-information-col1-3">همترازی عالی | Excellent levelling</td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tbody2-information-col2-4">4</td>
+                                            <td class="tbody2-information-col2-4">ثبات رنگ بالا | High color stability</td>
+                                            <td class="tbody-hardner-col4"><button class="button-style"><img src="../DiacoIcon/RecycleBin.svg" class="tbody-icone"></button></td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label" id="addon-ItemName">مشخصات فیزیکی و شیمیایی</label>
+                                <div class="list-group">
+                                <a class="physical-a">
+                                    فرمول اصلی فعال :   پلی اورتان صنعتی نیمه مات طوسی روشن IP1131.25.7047
+                                </a>
+                                <div class="list-group-item">نسبت ترکیب هاردنر به رنگ (درصد وزنی)</div>
+                                <div class="list-group-item">حلال خوری</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label" id="addon-ItemName">روش کاربرد</label>
+                                <select class="fstdropdown-select container-input input-boxshadow " id="ApplicationDropdown"
+                                    required>
+                                    <!-- <option value="" class="dropdown-menu-option selected">انتخاب کنید</option>
+                                    <option id="10124" value="1" class="dropdown-menu-option"> 1 </option>
+                                    <option id="10125" value="2" class="dropdown-menu-option"> 2 </option>
+                                    <option id="10129" value="3" class="dropdown-menu-option">3 </option>
+                                    <option id="10130" value="4" class="dropdown-menu-option">4</option>
+                                    <option id="10131" value="5" class="dropdown-menu-option"> 5</option> -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="PersianApplicationDesc" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">توضیحات کاربرد</label>
+                            </div>
+                            <div class="form-floating col-sm-5 col-md-5">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnglishApplicationDesc" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea direction">APPLICATION DESCRIPTION
+                                    DESCRIPTION</label>
+                            </div>
+                            <div class="column col-sm-1 col-md-1 img-btn">
+                                <button class="button-style"id="btnAddToApplication"> <img src="../DiacoIcon/Create.svg" class="create-button"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-md-11 c0l-sm-12 lable-table-incompatible table-margin-top" style="overflow-x: auto;">
+                                <table class="table table-bordered" id="ApplicationTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-information table3-information-col1">ردیف</th>
+                                            <th scope="col" class="table-information table3-information-col2">کاربرد
+                                            </th>
+                                            <th scope="col" class="table-information table3-information-col3">توضیحات
+                                            </th>
+                                            <th scope="col" class="table-information table3-information-col4">
+                                                DESCRIPTION</th>
+                                            <th scope="col" class="table3-information-col5" title="عملیات"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ApplicationList"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="column col-sm-11 col-md-11">
+                                <label class="container-label"id="addon-ItemName">سیستم پیشنهادی</label>
+                                <input type="tel" id="recommendedSysDesc" class="container-input input-boxshadow font-color"
+                                    placeholder="تایپ بفرمایید">
+                            </div>
+                            <div class="column col-sm-1 col-md-1 img-btn">
+                                <button class="button-style" id="btnAddToRecomendedSys"> <img src="../DiacoIcon/Create.svg" class="create-button"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column col-md-11 c0l-sm-12 lable-table-incompatible table-margin-top" style="overflow-x: auto;">
+                                <table class="table table-bordered" id="RecommendedSysTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="table-information table4-information-col1">ردیف</th>
+                                            <th scope="col" class="table-information table4-information-col2">سیستم
+                                                پیشنهادی</th>
+                                            <th scope="col" class="table4-information-col3" title="عملیات"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="RecommendedSysList"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="FaSafetyPrecautions" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">ملاحضات امنیتی</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnSafetyPrecautions" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea">SAFETY
+                                    PRECAUTIONS</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="FaStorage" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">انبار کردن</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnStorage" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea">STORAGE</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="FaShelfLife" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">ماندگاری</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnShelfLife" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea">SHELF LIFE</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="FaDisclaimer" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea">سلب مسئولیت</label>
+                            </div>
+                            <div class="form-floating col-sm-6 col-md-6">
+                                <textarea class="form-control textarea" placeholder="Leave a comment here"
+                                id="EnDisclaimer" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2" class="label-textarea en-textarea">DISCLAIMER</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/NewProduct-BrochureInfo.svg"
+                                class="img-style lable-img">بروشور محصول </div>
+                        <p class="p-style">تصویر اصلی بروشور</p>
+                        <input type="file" class="input-file form-control" id="BrochureImage">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card container-card">
+                    <div class="card-body container-card-body">
+                        <div class="h4 h4-style"><img src="../DiacoIcon/NewProduct-Complication.svg"
+                                class="img-style lable-img">اطلاعات تکمیلی </div>
+                        <div class="column col-sm-12 col-md-12">
+                            <label class="container-label" id="addon-ItemName">لینک وب سایت</label>
+                            <input type="tel" id="BrochurePic" class="container-input input-boxshadow font-color direction"
+                                placeholder="https://diacopars.com">
+                        </div>
+                        <p class="p-style"> تصویر اصلیDATA SHEET </p>
+                        <input type="file" class="input-file form-control"id="DataSheetImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="container-button-entry">
+            <button type="submit" class="button-entry" id="Save">ذخیره</button>
+        </div>
+    </div>
+</body>
+
+</html>

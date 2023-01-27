@@ -1,0 +1,138 @@
+@font-face{
+    font-family:myfont;
+    src: url("./Font/iranyekan/Farsi_numerals/IRANYekanMediumFaNum.ttf");}
+body{
+    font-family: myfont !important;
+}
+.container-card{
+    width:100% !important;
+     height:auto !important; 
+     border-radius: 7px !important;
+     margin: 3px 4px 3px 10px !important;
+}
+.container-card-body{
+    margin-top: 15px;
+    flex-direction: column;
+    height: auto;
+    width:100%;
+}
+.main-label{
+    background-color: #896fa5;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 5px 7px 5px 0px;
+    margin-top: 20px;
+}
+.main-input{
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 5px;
+    background-color: white;
+    width:100%;
+    height: 27px;
+    outline: none;
+    direction: rtl;
+}
+.create-container-header{
+    height: 27px;
+    width: 100%;
+    min-width: 10rem;
+    background-color: #604A78;
+    border-radius: 50px;
+    padding: 20px 9px;
+    color: #ffffff;
+    align-items: center;
+    margin-top: 50px !important;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: right;
+    margin-left: 4px;
+    font-size: 18px;
+}
+.create-container-header label{
+    margin-right: 5px;
+}
+.column-style{
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+::placeholder{
+text-align: right;
+color: gray;
+font-size: 13px;
+}
+.dropdown-menu-option{
+    background-color: white;
+    text-align: right;
+}
+.fstselected{
+    text-align: right;
+    color: gray !important;
+}
+.fstsearch{
+    direction: rtl;
+}
+.fstdropdown{
+    box-shadow: inset 0px 0px 4px rgb(200, 200, 200);
+    color: gray;
+    text-align: right;
+
+}
+.button-entry{
+    color: #ffffff;
+    border: none;
+    background-color: #00e18b;
+    box-shadow: 3px 4px 5px rgb(200, 200, 200);
+    border-radius: 50px;
+    padding: 5px;
+    width: 70px;
+    height: 35px;
+    margin:40px 70px 0px 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.container-button-entry{
+    display: flex;
+    justify-content: center;
+}
+.input-boxshadow{
+    box-shadow: inset 0px 0px 4px rgb(220, 220, 220);
+}
+.container-table-value{
+    text-align: center;
+    font-size: 12px;
+}
+.container-table-defined{
+    text-align: center;
+    font-size: 12px;
+}
+.h4-style{
+    font-size: 13px !important;
+    direction: rtl;
+    margin: -20px -28px 5px -28px !important;
+    border-bottom: 3px solid #604A78 !important;
+    padding: 2px 15px 5px;
+    font-weight:bold !important;
+}
+.img-btn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: -30px !important;
+}
+.button-style{
+    border: none;
+    border-radius: 50%;
+    background: none;
+}
+.create-button{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

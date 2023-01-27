@@ -1,0 +1,30 @@
+     // چک فقط عددی بودن
+        function allowOnlyNumber(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+        // جدا کننده قیمت
+        function separateNum(value, input) {
+            var nStr = value + '';
+            nStr = nStr.replace(/\,/g, "");
+            x = nStr.split('.');
+            x1 = x[0];
+            x2 = x.length > 1 ? '.' + x[1] : '';
+            var rgx = /(\d+)(\d{3})/;
+            while (rgx.test(x1)) {
+                x1 = x1.replace(rgx, '$1' + ',' + '$2');
+            }
+            if (input !== undefined) {
+
+                input.value = x1 + x2;
+            } else {
+                return x1 + x2;
+            }
+        }
+        // بازگرداننده قیمت به عددی
+        function ex_normalNum(num) {
+            num = num.replace(/,\s?/g, "");
+            return num;
+        }
